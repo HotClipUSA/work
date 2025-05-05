@@ -5,65 +5,65 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>YOUR WORK</title>
   <style>
-    body {
+    * {
       margin: 0;
       padding: 0;
+      box-sizing: border-box;
+    }
+
+    html, body {
+      height: 100%;
+      width: 100%;
       font-family: Arial, sans-serif;
-      background: linear-gradient(135deg, #1e3c72, #2a5298);
+      background: #000;
       color: white;
-      text-align: center;
+      overflow: hidden;
+      position: relative;
     }
 
     header {
-      background-color: #111;
-      padding: 20px 0;
+      width: 100%;
+      text-align: center;
+      padding: 20px;
+      background: #111;
       font-size: 2em;
       font-weight: bold;
+      z-index: 2;
+      position: relative;
     }
 
-    .container {
-      margin-top: 60px;
-    }
-
-    .big-button {
-      display: inline-block;
-      padding: 20px 40px;
-      font-size: 1.5em;
-      background-color: #ff9900;
-      color: white;
+    iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
       border: none;
-      border-radius: 10px;
-      text-decoration: none;
-      cursor: pointer;
-      transition: background 0.3s;
+      z-index: 1;
     }
 
-    .big-button:hover {
-      background-color: #e68a00;
-    }
-
-    .ad-banner {
-      margin-top: 60px;
+    .overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 3;
     }
   </style>
 </head>
 <body>
 
+  <!-- ADSTERRA FULLSCREEN -->
+  <iframe src="https://www.profitableratecpm.com/y13wxsgxt?key=a8cda71a94484d0cb6aecbdef0e240e3"></iframe>
+
+  <!-- HEADER -->
   <header>
     YOUR WORK
   </header>
 
-  <div class="container">
-    <a class="big-button" href="https://covermyassets.site/partner-lal-mosarof/" target="_blank">
-      Visit Our Partner
-    </a>
-  </div>
-
-  <div class="ad-banner">
-    <iframe src="https://www.profitableratecpm.com/y13wxsgxt?key=a8cda71a94484d0cb6aecbdef0e240e3" 
-            width="300" height="250" frameborder="0" scrolling="no">
-    </iframe>
-  </div>
+  <!-- FULL CLICK REDIRECT OVERLAY -->
+  <div class="overlay" onclick="window.location.href='https://covermyassets.site/partner-lal-mosarof/'"></div>
 
 </body>
 </html>
