@@ -1,69 +1,148 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>YOUR WORK</title>
   <style>
-    * {
+    body {
       margin: 0;
       padding: 0;
-      box-sizing: border-box;
+      overflow: hidden;
+      font-family: 'Arial', sans-serif;
+      background: linear-gradient(to bottom, #87CEEB, #f0f8ff);
+      animation: dayNight 20s infinite alternate;
     }
 
-    html, body {
-      height: 100%;
-      width: 100%;
-      font-family: Arial, sans-serif;
-      background: #000;
-      color: white;
-      overflow: hidden;
-      position: relative;
+    @keyframes dayNight {
+      0% {
+        background: linear-gradient(to bottom, #87CEEB, #f0f8ff); /* Day */
+      }
+      100% {
+        background: linear-gradient(to bottom, #000428, #004e92); /* Night */
+      }
     }
 
     header {
-      width: 100%;
       text-align: center;
-      padding: 20px;
-      background: #111;
-      font-size: 2em;
+      font-size: 2.5em;
       font-weight: bold;
-      z-index: 2;
+      padding: 20px;
+      color: white;
+      text-shadow: 2px 2px 4px #000;
+    }
+
+    .sky {
       position: relative;
+      width: 100vw;
+      height: 80vh;
+      overflow: hidden;
     }
 
-    iframe {
+    .cloud-button {
       position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 30px;
+      top: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    .btn {
+      position: relative;
+      padding: 30px 60px;
       border: none;
-      z-index: 1;
+      border-radius: 100px;
+      background: #fff;
+      box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+      font-size: 1.5em;
+      cursor: pointer;
+      animation: float 6s ease-in-out infinite;
+      transition: transform 0.3s;
     }
 
-    .overlay {
+    .btn:hover {
+      transform: scale(1.1);
+    }
+
+    @keyframes float {
+      0%, 100% {
+        transform: translateY(0px);
+      }
+      50% {
+        transform: translateY(-20px);
+      }
+    }
+
+    .cloud {
       position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      z-index: 3;
+      background: white;
+      border-radius: 50%;
+      opacity: 0.6;
+      animation: cloudMove 60s linear infinite;
+    }
+
+    @keyframes cloudMove {
+      from { left: -200px; }
+      to { left: 110%; }
+    }
+
+    .moon, .stars {
+      position: absolute;
+      display: none;
+    }
+
+    .moon {
+      top: 40px;
+      right: 60px;
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      background: #f5f3ce;
+      box-shadow: 0 0 15px white;
+    }
+
+    .stars {
+      width: 2px;
+      height: 2px;
+      background: white;
+      box-shadow: 10px 10px white, 30px 15px white, 60px 5px white,
+                  90px 20px white, 120px 8px white;
+    }
+
+    body.night .moon, body.night .stars {
+      display: block;
     }
   </style>
 </head>
 <body>
+  <header>YOUR WORK</header>
+  <div class="sky">
+    <div class="moon"></div>
+    <div class="stars"></div>
 
-  <!-- ADSTERRA FULLSCREEN -->
-  <iframe src="https://www.profitableratecpm.com/y13wxsgxt?key=a8cda71a94484d0cb6aecbdef0e240e3"></iframe>
+    <div class="cloud-button">
+      <button class="btn" onclick="window.location.href='https://covermyassets.site/partner-lal-mosarof/'">Go to Work</button>
+      <button class="btn" onclick="window.open('https://www.profitableratecpm.com/y13wxsgxt?key=a8cda71a94484d0cb6aecbdef0e240e3', '_blank')">Visit Ad</button>
+    </div>
 
-  <!-- HEADER -->
-  <header>
-    YOUR WORK
-  </header>
+    <!-- Floating clouds -->
+    <div class="cloud" style="width: 100px; height: 60px; top: 10%; animation-duration: 60s;"></div>
+    <div class="cloud" style="width: 60px; height: 40px; top: 30%; animation-duration: 90s;"></div>
+    <div class="cloud" style="width: 80px; height: 50px; top: 50%; animation-duration: 70s;"></div>
+    <div class="cloud" style="width: 120px; height: 70px; top: 20%; animation-duration: 80s;"></div>
+    <div class="cloud" style="width: 40px; height: 30px; top: 70%; animation-duration: 100s;"></div>
+  </div>
 
-  <!-- FULL CLICK REDIRECT OVERLAY -->
-  <div class="overlay" onclick="window.location.href='https://covermyassets.site/partner-lal-mosarof/'"></div>
-
+  <script>
+    // Automatically toggle night mode
+    setInterval(() => {
+      document.body.classList.toggle('night');
+    }, 20000);
+  </script>
 </body>
 </html>
