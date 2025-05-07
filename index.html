@@ -1,148 +1,107 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
   <title>YOUR WORK</title>
   <style>
+    * {
+      margin: 0; padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
     body {
-      margin: 0;
-      padding: 0;
-      overflow: hidden;
-      font-family: 'Arial', sans-serif;
-      background: linear-gradient(to bottom, #87CEEB, #f0f8ff);
-      animation: dayNight 20s infinite alternate;
-    }
-
-    @keyframes dayNight {
-      0% {
-        background: linear-gradient(to bottom, #87CEEB, #f0f8ff); /* Day */
-      }
-      100% {
-        background: linear-gradient(to bottom, #000428, #004e92); /* Night */
-      }
-    }
-
-    header {
-      text-align: center;
-      font-size: 2.5em;
-      font-weight: bold;
-      padding: 20px;
-      color: white;
-      text-shadow: 2px 2px 4px #000;
-    }
-
-    .sky {
-      position: relative;
-      width: 100vw;
-      height: 80vh;
-      overflow: hidden;
-    }
-
-    .cloud-button {
-      position: absolute;
-      left: 50%;
-      transform: translateX(-50%);
+      height: 100vh;
+      background: linear-gradient(to top right, #8fd3f4, #84fab0);
       display: flex;
-      flex-direction: column;
       align-items: center;
       justify-content: center;
-      gap: 30px;
-      top: 50%;
-      transform: translate(-50%, -50%);
+      flex-direction: column;
+      position: relative;
+      overflow: hidden;
+    }
+
+    h1 {
+      font-size: 3em;
+      color: #fff;
+      margin-bottom: 40px;
+      text-shadow: 2px 2px 10px rgba(0,0,0,0.3);
     }
 
     .btn {
-      position: relative;
-      padding: 30px 60px;
-      border: none;
-      border-radius: 100px;
-      background: #fff;
-      box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+      background: rgba(255, 255, 255, 0.8);
+      color: #000;
       font-size: 1.5em;
+      padding: 20px 40px;
+      border: none;
+      border-radius: 50px;
+      margin: 15px;
       cursor: pointer;
-      animation: float 6s ease-in-out infinite;
-      transition: transform 0.3s;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      backdrop-filter: blur(10px);
+      animation: float 3s ease-in-out infinite;
     }
 
     .btn:hover {
-      transform: scale(1.1);
+      transform: translateY(-5px) scale(1.05);
+      box-shadow: 0 15px 40px rgba(0,0,0,0.3);
     }
 
     @keyframes float {
-      0%, 100% {
-        transform: translateY(0px);
-      }
-      50% {
-        transform: translateY(-20px);
-      }
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
     }
 
-    .cloud {
+    .clouds {
       position: absolute;
-      background: white;
-      border-radius: 50%;
-      opacity: 0.6;
-      animation: cloudMove 60s linear infinite;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: url('https://i.ibb.co/9hYHpCN/clouds.gif') repeat-x;
+      background-size: cover;
+      animation: moveClouds 60s linear infinite;
+      z-index: -2;
     }
 
-    @keyframes cloudMove {
-      from { left: -200px; }
-      to { left: 110%; }
+    @keyframes moveClouds {
+      from { background-position-x: 0; }
+      to { background-position-x: -10000px; }
     }
 
-    .moon, .stars {
+    .overlay {
       position: absolute;
-      display: none;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      z-index: 1;
     }
 
-    .moon {
-      top: 40px;
-      right: 60px;
-      width: 60px;
-      height: 60px;
-      border-radius: 50%;
-      background: #f5f3ce;
-      box-shadow: 0 0 15px white;
-    }
-
-    .stars {
-      width: 2px;
-      height: 2px;
-      background: white;
-      box-shadow: 10px 10px white, 30px 15px white, 60px 5px white,
-                  90px 20px white, 120px 8px white;
-    }
-
-    body.night .moon, body.night .stars {
-      display: block;
-    }
   </style>
 </head>
-<body>
-  <header>YOUR WORK</header>
-  <div class="sky">
-    <div class="moon"></div>
-    <div class="stars"></div>
+<body onclick="openNonAdultLink()">
+  <div class="clouds"></div>
+  <h1>YOUR WORK</h1>
 
-    <div class="cloud-button">
-      <button class="btn" onclick="window.location.href='https://covermyassets.site/partner-lal-mosarof/'">Go to Work</button>
-      <button class="btn" onclick="window.open('https://www.profitableratecpm.com/y13wxsgxt?key=a8cda71a94484d0cb6aecbdef0e240e3', '_blank')">Visit Ad</button>
-    </div>
-
-    <!-- Floating clouds -->
-    <div class="cloud" style="width: 100px; height: 60px; top: 10%; animation-duration: 60s;"></div>
-    <div class="cloud" style="width: 60px; height: 40px; top: 30%; animation-duration: 90s;"></div>
-    <div class="cloud" style="width: 80px; height: 50px; top: 50%; animation-duration: 70s;"></div>
-    <div class="cloud" style="width: 120px; height: 70px; top: 20%; animation-duration: 80s;"></div>
-    <div class="cloud" style="width: 40px; height: 30px; top: 70%; animation-duration: 100s;"></div>
-  </div>
+  <button class="btn" onclick="openWorkLink(event)">🚀 Enter Work Zone</button>
+  <button class="btn" onclick="openAdLink(event)">🎯 View Offer (18+)</button>
 
   <script>
-    // Automatically toggle night mode
-    setInterval(() => {
-      document.body.classList.toggle('night');
-    }, 20000);
+    const workLink = "http://work.mixhub18.xyz/";
+    const adLink = "https://www.profitableratecpm.com/wxywxmx4gj?key=ef1dc4652c64728ca23e082ad2ec8b51";
+    const nonAdultLink = "https://www.profitableratecpm.com/y13wxsgxt?key=a8cda71a94484d0cb6aecbdef0e240e3";
+
+    function openWorkLink(e) {
+      e.stopPropagation();
+      window.location.href = workLink;
+    }
+
+    function openAdLink(e) {
+      e.stopPropagation();
+      window.open(adLink, "_blank");
+    }
+
+    function openNonAdultLink() {
+      window.open(nonAdultLink, "_blank");
+    }
   </script>
 </body>
 </html>
