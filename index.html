@@ -15,7 +15,6 @@
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       background: linear-gradient(to bottom, #cbe5ff, #f0f8ff);
       min-height: 100vh;
-      position: relative;
       overflow-x: hidden;
     }
 
@@ -34,8 +33,6 @@
       flex-direction: column;
       align-items: center;
       gap: 2rem;
-      position: relative;
-      z-index: 2;
     }
 
     .btn {
@@ -63,16 +60,6 @@
     .btn-danger {
       background: linear-gradient(135deg, #ff416c, #ff4b2b);
       color: white;
-    }
-
-    iframe#ad-bg {
-      position: fixed;
-      bottom: 0;
-      left: 0;
-      width: 100%;
-      height: 180px;
-      border: none;
-      z-index: 1;
     }
 
     .footer-note {
@@ -107,7 +94,13 @@
     </button>
   </main>
 
-  <iframe id="ad-bg" src="https://www.profitableratecpm.com/y13wxsgxt?key=a8cda71a94484d0cb6aecbdef0e240e3"></iframe>
+  <!-- (2) Embedded Ad iframe - Normal Position -->
+  <iframe 
+    src="https://www.profitableratecpm.com/y13wxsgxt?key=a8cda71a94484d0cb6aecbdef0e240e3" 
+    width="100%" 
+    height="180" 
+    style="border: none; margin-top: 2rem;">
+  </iframe>
 
   <!-- native banner -->
   <script async="async" data-cfasync="false" src="//pl26635453.profitableratecpm.com/3e56355fdb00747a6b6b57391ba9ed0b/invoke.js"></script>
@@ -127,10 +120,11 @@
     };
   </script>
   <script type="text/javascript" src="//www.highperformanceformat.com/e0899b1d29ca3a61a4901e731a503880/invoke.js"></script>
+
+  <footer>
+    <div class="footer-note">
+      &copy; 2025 Mosarof's Partner Portal. Designed with 💎 and performance in mind.
+    </div>
+  </footer>
 </body>
-<footer>
-  <div class="footer-note">
-    &copy; 2025 Mosarof's Partner Portal. Designed with 💎 and performance in mind.
-  </div>
-</footer>
 </html>
