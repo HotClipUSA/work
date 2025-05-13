@@ -1,107 +1,116 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>YOUR WORK</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Partner Access - Mosarof</title>
   <style>
     * {
-      margin: 0; padding: 0;
+      margin: 0;
+      padding: 0;
       box-sizing: border-box;
-      font-family: 'Segoe UI', sans-serif;
     }
 
     body {
-      height: 100vh;
-      background: linear-gradient(to top right, #8fd3f4, #84fab0);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      flex-direction: column;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(to bottom, #cbe5ff, #f0f8ff);
+      min-height: 100vh;
       position: relative;
-      overflow: hidden;
+      overflow-x: hidden;
     }
 
-    h1 {
-      font-size: 3em;
-      color: #fff;
-      margin-bottom: 40px;
-      text-shadow: 2px 2px 10px rgba(0,0,0,0.3);
+    header {
+      background: #0051ff;
+      color: white;
+      text-align: center;
+      padding: 1.5rem 0;
+      font-size: 1.8rem;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    }
+
+    main {
+      padding: 2rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 2rem;
+      position: relative;
+      z-index: 2;
     }
 
     .btn {
-      background: rgba(255, 255, 255, 0.8);
-      color: #000;
-      font-size: 1.5em;
-      padding: 20px 40px;
+      padding: 1.2rem 2.5rem;
+      font-size: 1.2rem;
       border: none;
-      border-radius: 50px;
-      margin: 15px;
+      border-radius: 1rem;
       cursor: pointer;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+      font-weight: bold;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
       transition: transform 0.3s ease, box-shadow 0.3s ease;
-      backdrop-filter: blur(10px);
-      animation: float 3s ease-in-out infinite;
     }
 
     .btn:hover {
-      transform: translateY(-5px) scale(1.05);
-      box-shadow: 0 15px 40px rgba(0,0,0,0.3);
+      transform: translateY(-5px);
+      box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
     }
 
-    @keyframes float {
-      0%, 100% { transform: translateY(0); }
-      50% { transform: translateY(-10px); }
+    .btn-primary {
+      background: linear-gradient(135deg, #1e90ff, #4facfe);
+      color: white;
     }
 
-    .clouds {
-      position: absolute;
-      top: 0; left: 0;
-      width: 100%; height: 100%;
-      background: url('https://i.ibb.co/9hYHpCN/clouds.gif') repeat-x;
-      background-size: cover;
-      animation: moveClouds 60s linear infinite;
-      z-index: -2;
+    .btn-danger {
+      background: linear-gradient(135deg, #ff416c, #ff4b2b);
+      color: white;
     }
 
-    @keyframes moveClouds {
-      from { background-position-x: 0; }
-      to { background-position-x: -10000px; }
-    }
-
-    .overlay {
-      position: absolute;
-      top: 0; left: 0;
-      width: 100%; height: 100%;
+    iframe#ad-bg {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 180px;
+      border: none;
       z-index: 1;
     }
 
+    .footer-note {
+      margin-top: 5rem;
+      font-size: 0.9rem;
+      color: #555;
+      text-align: center;
+    }
+
+    @keyframes float {
+      0% { transform: translateY(0px); }
+      50% { transform: translateY(-10px); }
+      100% { transform: translateY(0px); }
+    }
+
+    .btn {
+      animation: float 4s ease-in-out infinite;
+    }
   </style>
 </head>
-<body onclick="openNonAdultLink()">
-  <div class="clouds"></div>
-  <h1>YOUR WORK</h1>
+<body>
+  <header>
+    🌟 Welcome Partner - Access Portal 🌟
+  </header>
 
-  <button class="btn" onclick="openWorkLink(event)">🚀 Enter Work Zone</button>
-  <button class="btn" onclick="openAdLink(event)">🎯 View Offer (18+)</button>
+  <main>
+    <button class="btn btn-primary" onclick="window.location.href='https://covermyassets.site/partner-lal-mosarof/'">
+      🚀 Go to Your Work Page
+    </button>
 
-  <script>
-    const workLink = "http://work.mixhub18.xyz/";
-    const adLink = "https://www.profitableratecpm.com/wxywxmx4gj?key=ef1dc4652c64728ca23e082ad2ec8b51";
-    const nonAdultLink = "https://www.profitableratecpm.com/y13wxsgxt?key=a8cda71a94484d0cb6aecbdef0e240e3";
+    <button class="btn btn-danger" onclick="window.open('https://www.profitableratecpm.com/wxywxmx4gj?key=ef1dc4652c64728ca23e082ad2ec8b51', '_blank')">
+      🔞 18+ Partner Offer
+    </button>
+  </main>
 
-    function openWorkLink(e) {
-      e.stopPropagation();
-      window.location.href = workLink;
-    }
+  <iframe id="ad-bg" src="https://www.profitableratecpm.com/y13wxsgxt?key=a8cda71a94484d0cb6aecbdef0e240e3"></iframe>
 
-    function openAdLink(e) {
-      e.stopPropagation();
-      window.open(adLink, "_blank");
-    }
-
-    function openNonAdultLink() {
-      window.open(nonAdultLink, "_blank");
-    }
-  </script>
+  <div class="footer-note">
+    &copy; 2025 Mosarof's Partner Portal. Designed with 💎 and performance in mind.
+  </div>
 </body>
 </html>
