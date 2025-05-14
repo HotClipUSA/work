@@ -1,44 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Partner Access - New Version</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Partner Access - Mosarof</title>
   <style>
     body {
-      font-family: Arial, sans-serif;
       margin: 0;
       padding: 0;
       background-color: #f8f8f8;
+      font-family: Arial, sans-serif;
       text-align: center;
+      scroll-behavior: smooth;
     }
+
     header {
       background-color: #2b2b2b;
-      color: #fff;
+      color: white;
       padding: 20px;
-      font-size: 1.5rem;
+      font-size: 1.8rem;
     }
+
+    .main-section {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
     .buttons {
-      margin: 30px 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+      margin: 40px 0;
     }
+
     .btn {
-      display: inline-block;
-      padding: 15px 30px;
-      margin: 10px;
-      font-size: 1.2rem;
-      color: #fff;
+      padding: 20px 50px;
+      font-size: 1.5rem;
+      color: white;
       background-color: #007BFF;
       border: none;
-      border-radius: 8px;
+      border-radius: 12px;
       cursor: pointer;
       text-decoration: none;
+      transition: transform 0.2s ease, background-color 0.3s ease;
     }
+
+    .btn:hover {
+      background-color: #0056b3;
+      transform: scale(1.05);
+    }
+
     .embed-container {
-      margin: 80px auto;
-      max-width: 560px;
       position: relative;
+      width: 100%;
+      max-width: 560px;
       height: 315px;
+      margin: 0 auto 30px;
     }
+
     .embed-container iframe {
       position: absolute;
       top: 0;
@@ -47,15 +69,22 @@
       height: 100%;
       border: 0;
     }
+
     footer {
       background-color: #2b2b2b;
       color: #fff;
       padding: 10px;
       font-size: 0.9rem;
-      margin-top: 40px;
     }
+
     .ad-section {
-      margin: 30px 0;
+      margin: 40px 0;
+    }
+
+    h1 {
+      font-size: 1.5rem;
+      margin-bottom: 10px;
+      color: #333;
     }
   </style>
 </head>
@@ -65,23 +94,31 @@
     🔗 Welcome to Partner Access Portal - Mosarof 🔗
   </header>
 
-  <div class="buttons">
-    <a class="btn" href="https://covermyassets.site/partner-lal-mosarof/" target="_blank">My Work</a>
-    <a class="btn" href="https://www.profitableratecpm.com/wxywxmx4gj?key=ef1dc4652c64728ca23e082ad2ec8b51" target="_blank">Adsterra Adult Link</a>
+  <!-- Main area (Above-the-fold content) -->
+  <div class="main-section">
+
+    <div class="buttons">
+      <a class="btn" href="https://covermyassets.site/partner-lal-mosarof/" target="_blank">🚀 My Work</a>
+      <a class="btn" href="https://www.profitableratecpm.com/wxywxmx4gj?key=ef1dc4652c64728ca23e082ad2ec8b51" target="_blank">🎯 Adsterra Adult Link</a>
+    </div>
+
+    <!-- First Non-Adult Ad (Visible Initially) -->
+    <h1>Ad Section 1 - Embedded Iframe Ad</h1>
+    <div class="embed-container">
+      <iframe src="https://www.profitableratecpm.com/y13wxsgxt?key=a8cda71a94484d0cb6aecbdef0e240e3" allowfullscreen></iframe>
+    </div>
+
+    <footer>
+      &copy; 2025 Mosarof. All rights reserved.
+    </footer>
   </div>
 
-  <div class="embed-container">
-    <iframe src="https://www.profitableratecpm.com/y13wxsgxt?key=a8cda71a94484d0cb6aecbdef0e240e3" allowfullscreen></iframe>
-  </div>
-
-  <footer>
-    &copy; 2025 Mosarof. All rights reserved.
-  </footer>
-
+  <!-- Hidden Ads (Visible on Scroll) -->
   <!-- Popunder Script -->
   <script type='text/javascript' src='//pl26635430.profitableratecpm.com/e9/74/18/e97418affe9794f91c778fa1ba9c83c2.js'></script>
 
   <!-- Native Banner Script -->
+  <h1>Ad Section 2 - Native Banner</h1>
   <div class="ad-section">
     <script async="async" data-cfasync="false" src="//pl26635453.profitableratecpm.com/3e56355fdb00747a6b6b57391ba9ed0b/invoke.js"></script>
     <div id="container-3e56355fdb00747a6b6b57391ba9ed0b"></div>
@@ -91,6 +128,7 @@
   <script type='text/javascript' src='//pl26635480.profitableratecpm.com/e8/a3/3e/e8a33ef347bfe787293a15b631d4d4bf.js'></script>
 
   <!-- Banner 728x90 -->
+  <h1>Ad Section 3 - Banner 728x90</h1>
   <div class="ad-section">
     <script type="text/javascript">
       atOptions = {
@@ -104,8 +142,11 @@
     <script type="text/javascript" src="//www.highperformanceformat.com/e0899b1d29ca3a61a4901e731a503880/invoke.js"></script>
   </div>
 
+  <!-- Second Iframe Ad -->
+  <h1>Ad Section 4 - Embedded Iframe Ad</h1>
   <div class="embed-container">
     <iframe src="https://www.profitableratecpm.com/bc68w494?key=2cd410c7e426813b645d19e8e1c767b9" allowfullscreen></iframe>
   </div>
+
 </body>
 </html>
