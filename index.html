@@ -100,6 +100,72 @@ header h1 {
         flex: 1 1 100%;
       }
     }
+
+    footer {
+  background-color: #111;
+  color: #f1f1f1;
+  padding: 40px 20px;
+  text-align: center;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.footer-container {
+  max-width: 1000px;
+  margin: auto;
+}
+
+.site-name {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 28px;
+  margin-bottom: 10px;
+  color: #FFD700;
+}
+
+.tagline {
+  font-size: 14px;
+  margin-bottom: 20px;
+  color: #aaa;
+}
+
+.footer-links {
+  list-style: none;
+  padding: 0;
+  margin: 20px 0;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.footer-links li a {
+  color: #f1f1f1;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-links li a:hover {
+  color: #00c4ff;
+}
+
+.footer-link {
+  display: inline-block;
+  margin-top: 15px;
+  color: #00c4ff;
+  text-decoration: underline;
+  font-size: 14px;
+}
+
+.footer-link:hover {
+  color: #ffffff;
+}
+
+@media (max-width: 600px) {
+  .footer-links {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+
   </style>
 </head>
 <body>
@@ -210,4 +276,20 @@ header h1 {
 <script type='text/javascript' src='//pl26635480.profitableratecpm.com/e8/a3/3e/e8a33ef347bfe787293a15b631d4d4bf.js'></script>
 
 </body>
+<footer>
+  <div class="footer-container">
+    <h2 class="site-name">MY WORK</h2>
+    <p class="tagline">Crafted with passion & dedication.</p>
+    
+    <ul class="footer-links">
+      <li><a href="/">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+
+    <p class="copyright">© 2025 MY WORK. All rights reserved.</p>
+    <a class="footer-link" href="http://work.mixhub18.xyz/">Visit Live Site</a>
+  </div>
+</footer>
 </html>
