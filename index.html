@@ -13,19 +13,35 @@
     }
 
     header {
-      background-color: #fff;
-      padding: 15px 20px;
-      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-      text-align: center;
-    }
+  background-color: #fff;
+  padding: 15px 20px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  text-align: center;
+}
 
-    header h1 {
-      font-family: 'Orbitron', sans-serif;
-      font-size: 50px;
-      color: #FFD700;
-      margin: 0;
-      font-weight: bold;
-    }
+.header-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px; /* ছবির আর লেখার মাঝে ফাঁকা রাখতে */
+}
+
+.logo {
+  width: 70px; /* ফন্টের সাথে সামঞ্জস্য রেখে সাইজ ঠিক করা হয়েছে */
+  height: 70px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #FFD700; /* হালকা গোল্ডেন বর্ডার */
+}
+
+header h1 {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 50px;
+  color: #FFD700;
+  margin: 0;
+  font-weight: bold;
+}
+
 
     .buttons {
       display: flex;
@@ -89,8 +105,12 @@
 <body>
 
   <header>
+  <div class="header-container">
+    <img src="images/Picsart_24-09-01_00-37-05-171.jpg" alt="logo" class="logo">
     <h1>MY WORK</h1>
-  </header>
+  </div>
+</header>
+
 
   <div class="buttons">
     <div class="btn" data-link="https://covermyassets.site/partner-lal-mosarof/">work 🟢<br>button</div>
