@@ -1,24 +1,61 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" >
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Split Screen Buttons</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Split Buttons Design</title>
   <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    body, html {
+      height: 100%;
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    .btn {
+      cursor: pointer;
+      transition: background-color 0.3s, color 0.3s;
+      user-select: none;
+    }
+    .btn:hover {
+      background-color: #f0f0f0;
+    }
+    .active {
+      background-color: #1e40af; /* blue-800 */
+      color: white !important;
+      font-weight: 700;
+      box-shadow: 0 4px 15px rgb(30 64 175 / 0.4);
+    }
+  </style>
 </head>
-<body class="h-screen m-0 p-0">
-  <div class="flex h-full">
-    <!-- Work Button Section -->
-    <a href="https://youtu.be/lZibPeVP44M?si=dYqptqxTHe8Gcud9"
-       class="w-1/2 bg-white flex items-center justify-center text-blue-600 text-2xl font-bold hover:bg-gray-100 transition duration-300 border-r border-gray-300">
-      Work
-    </a>
-
-    <!-- Ads Button Section -->
-    <a href="https://chatgpt.com/c/68347b58-d4e0-8001-9fd7-40afa872689d"
-       class="w-1/2 bg-white flex items-center justify-center text-green-600 text-2xl font-bold hover:bg-gray-100 transition duration-300">
-      Ads
-    </a>
+<body class="h-screen flex">
+  <!-- Work Button -->
+  <div id="workBtn" 
+       class="btn w-1/2 flex items-center justify-center bg-white text-blue-800 text-4xl font-semibold"
+       onclick="handleClick('work')">
+    Work
   </div>
+
+  <!-- Ads Button -->
+  <div id="adsBtn" 
+       class="btn w-1/2 flex items-center justify-center bg-white text-green-700 text-4xl font-semibold border-l border-gray-300"
+       onclick="handleClick('ads')">
+    Ads
+  </div>
+
+  <script>
+    function handleClick(button) {
+      const workBtn = document.getElementById('workBtn');
+      const adsBtn = document.getElementById('adsBtn');
+      if(button === 'work') {
+        workBtn.classList.add('active');
+        adsBtn.classList.remove('active');
+        window.open('https://youtu.be/lZibPeVP44M?si=dYqptqxTHe8Gcud9', '_blank');
+      } else {
+        adsBtn.classList.add('active');
+        workBtn.classList.remove('active');
+        window.open('https://chatgpt.com/c/68347b58-d4e0-8001-9fd7-40afa872689d', '_blank');
+      }
+    }
+  </script>
 </body>
 </html>
